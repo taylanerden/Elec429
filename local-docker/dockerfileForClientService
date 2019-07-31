@@ -1,0 +1,11 @@
+FROM openjdk:latest
+
+
+WORKDIR /tmp/
+
+COPY service-0.0.1-SNAPSHOT.jar /tmp/service-0.0.1-SNAPSHOT.jar
+COPY client-0.0.1-SNAPSHOT.jar /tmp/client-0.0.1-SNAPSHOT.jar
+COPY  clientService.sh  /tmp/clientService.sh
+
+
+CMD  ["/bin/sh", "/tmp/clientService.sh"]

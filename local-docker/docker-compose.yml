@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+   client:
+      image: elec429client:v01
+      ports:
+         - "8081:8081"
+
+   service:
+      image: elec429service:v01
+      ports:
+        - "8080:8080"
+
